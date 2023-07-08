@@ -61,6 +61,7 @@ class Invoice extends Component {
     if(this.state.invoiceConsumptions && this.state.invoiceProductions) {
       return (
         <div>
+         <h1 style={{color: '#21ba45', textAlign:'center'}}>Invoice</h1>
           <b style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Billed Amount: {this.state.invoiceData}</b>
           <br></br>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

@@ -43,41 +43,43 @@ class PanelStatusTable extends Component {
     if(this.state.creditsData) {
 
       return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div>
+         <h1 style={{color: '#21ba45', textAlign:'center'}}>Credits</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
-          <Table style={{ width: '80%' }} className="my-table">
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell className="table-header-cell">Seller Community ID</Table.HeaderCell>
-                <Table.HeaderCell className="table-header-cell">Seller House ID</Table.HeaderCell>
-                <Table.HeaderCell className="table-header-cell">Buyer Community ID</Table.HeaderCell>
-                <Table.HeaderCell className="table-header-cell">Buyer House ID</Table.HeaderCell>
-                <Table.HeaderCell className="table-header-cell">Units(V)</Table.HeaderCell>
-                <Table.HeaderCell className="table-header-cell">Price</Table.HeaderCell>
-                <Table.HeaderCell className="table-header-cell">Consumed At</Table.HeaderCell>
+            <Table style={{ width: '80%' }} className="my-table">
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell className="table-header-cell">Seller Community ID</Table.HeaderCell>
+                  <Table.HeaderCell className="table-header-cell">Seller House ID</Table.HeaderCell>
+                  <Table.HeaderCell className="table-header-cell">Buyer Community ID</Table.HeaderCell>
+                  <Table.HeaderCell className="table-header-cell">Buyer House ID</Table.HeaderCell>
+                  <Table.HeaderCell className="table-header-cell">Units(V)</Table.HeaderCell>
+                  <Table.HeaderCell className="table-header-cell">Price</Table.HeaderCell>
+                  <Table.HeaderCell className="table-header-cell">Consumed At</Table.HeaderCell>
 
-              </Table.Row>
-            </Table.Header>
-            <Table.Body className="table-body">
-              {this.state.creditsData.map( function (credits,index) {
-                return (
-                  <Table.Row className={`table-row ${index%2 ===0 ? 'table-row-even' : 'table-row-odd'}`}>
-                    <Table.Cell className="table-cell">{credits.sellerCommunityId}</Table.Cell>
-                    <Table.Cell className="table-cell">{credits.sellerHouseId}</Table.Cell>
-                    <Table.Cell className="table-cell">{credits.buyerCommunityId}</Table.Cell>
-                    <Table.Cell className="table-cell">{credits.buyerHouseId}</Table.Cell>
-                    <Table.Cell className="table-cell">{credits.units}</Table.Cell>
-                    <Table.Cell className="table-cell">{credits.price}</Table.Cell>
-                    <Table.Cell className="table-cell">{credits.consumedAt}</Table.Cell>
-                  </Table.Row>
-                )
-              })}
-            </Table.Body>
-          </Table>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body className="table-body">
+                {this.state.creditsData.map( function (credits,index) {
+                  return (
+                    <Table.Row className={`table-row ${index%2 ===0 ? 'table-row-even' : 'table-row-odd'}`}>
+                      <Table.Cell className="table-cell">{credits.sellerCommunityId}</Table.Cell>
+                      <Table.Cell className="table-cell">{credits.sellerHouseId}</Table.Cell>
+                      <Table.Cell className="table-cell">{credits.buyerCommunityId}</Table.Cell>
+                      <Table.Cell className="table-cell">{credits.buyerHouseId}</Table.Cell>
+                      <Table.Cell className="table-cell">{credits.units}</Table.Cell>
+                      <Table.Cell className="table-cell">{credits.price}</Table.Cell>
+                      <Table.Cell className="table-cell">{credits.consumedAt}</Table.Cell>
+                    </Table.Row>
+                  )
+                })}
+              </Table.Body>
+            </Table>
 
-        </div>
+          </div>
 
-       
+       </div>
       );
     };
    }
