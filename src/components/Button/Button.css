@@ -1,0 +1,40 @@
+/* Button.css */
+
+.button {
+  background-color: #ffffff;
+  color: #21ba45;
+  border: 2px solid #21ba45;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  height: 50px;
+  width: 300px;
+}
+
+.button:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.button:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.button:last-child.active {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.button:hover,
+.button:active {
+  background-color: #21ba45;
+  color: #ffffff;
+}
+
+.button.active {
+  background-color: #21ba45;
+  color: #ffffff;
+}

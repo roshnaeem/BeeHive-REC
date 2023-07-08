@@ -1,0 +1,42 @@
+.latest-events-feed--event-content {
+    margin-top: 0.25em !important;
+}
+
+.latest-events-feed--event-summary {
+    font-weight: 400 !important;
+}
+
+.latest-events-feed--event-date {
+    font-size: .85714286em !important;
+}
+
+.latest-events-feed--event-date:hover {
+    cursor: default;
+}
+
+.latest-events-feed--event--enter {
+    opacity: 0;
+}
+
+.latest-events-feed--event--enter.latest-events-feed--event--enter-active {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.latest-events-feed--event-date::after {
+    content: '';
+    display: inline-block;
+    margin-left: .5em;
+    height: .5em;
+    width: .5em;
+    border-radius: .5em;
+    background-color: rgba(33, 186, 67, 1);
+
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.latest-events-feed--event--enter.latest-events-feed--event--enter-active .latest-events-feed--event-date::after {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
