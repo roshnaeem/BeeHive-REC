@@ -12,8 +12,9 @@ class LatestEventsFeed extends Component {
 
       <div>
          <h1 style={{color: '#21ba45', textAlign:'center'}}>Recommendations</h1>
+         <h2>Hourly Predictions:</h2>
 
-        <div class="ui link cards" style={{margin: "30px", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div class="ui link cards" style={{margin: "20px", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
               
           <div class="card">
                 <div class="image">
@@ -22,10 +23,10 @@ class LatestEventsFeed extends Component {
             <div class="content">
               <div class="header">Dishwasher</div>
               <div class="meta">
-                <a>Today at 6:12pm</a>
+                <a>Tomorrow at 9:30 AM</a>
               </div>
               <div class="description">
-                Start the dishwasher.
+              System predicts the less usage of energy from 09:30 to 14:30, Tomorrow.
               </div>
             </div>
             <div class="extra content">
@@ -34,7 +35,7 @@ class LatestEventsFeed extends Component {
               </span>
               <span>
                 <i class="leaf icon"></i>
-                Upto 125 Watts
+                Start the dishwasher. 
               </span>
             </div>
           </div>
@@ -45,18 +46,19 @@ class LatestEventsFeed extends Component {
             <div class="content">
               <div class="header">Laundry</div>
               <div class="meta">
-                <span class="date">Tuesday at 1:21pm</span>
+                <span class="date"> Tomorrow at 11:00 AM </span>
               </div>
               <div class="description">
-            Use the washing machine and dryer.
+                System predicts the less usage of energy from 09:30 to 14:30, Tomorrow.
               </div>
             </div>
             <div class="extra content">
               <span class="right floated">
+             
               </span>
               <span>
                 <i class="leaf icon"></i>
-                Upto 90 Watts
+                Use the Washing Machine and Dryer
               </span>
             </div>
           </div>
@@ -67,10 +69,10 @@ class LatestEventsFeed extends Component {
             <div class="content">
               <div class="header">Printer</div>
               <div class="meta">
-                <a>Tomorrow at 8:39am</a>
+                <a>Tomorrow at 1:30 AM</a>
               </div>
               <div class="description">
-              Print the documents.
+              System predicts the less usage of energy from 09:30 to 14:30, Tomorrow.
               </div>
             </div>
             <div class="extra content">
@@ -79,7 +81,7 @@ class LatestEventsFeed extends Component {
               </span>
               <span>
                 <i class="leaf icon"></i>
-                Upto 75 Watts
+                Print the documents.
               </span>
             </div>
           </div>
