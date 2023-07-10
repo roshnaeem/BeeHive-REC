@@ -42,5 +42,12 @@
 }
 
 h2 {
-    margin-left: 20px;;
+    margin: 0%;
+    text-align:center;
+}
+h3{
+    margin: 0%;
+    text-align:center;
+    color: #777575;
+    font-weight: normal;
 }

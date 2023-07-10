@@ -1,0 +1,41 @@
+.day-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+    row-gap: 10px; /* Adjust the gap between grid items */
+    max-width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .day {
+    width: 80%; /* Each day will take up the full width of the grid cell */
+    padding-top: 10%;
+    padding-bottom: 10%; /* Set the padding-top to create a smaller square size */
+    background-color: #e9e9e9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .green-highlighted {
+    background-color: rgba(33, 186, 67, 1);
+    color: white;
+  }
+
+  .red-highlighted{
+    background-color: rgb(170, 27, 27);
+    color: white;
+  }
+
+  .day:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  

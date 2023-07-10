@@ -4,6 +4,7 @@ import './LatestEventsFeed.css';
 import dishwasher from '../../images/dishbg.png';
 import laundry from '../../images/laundrybg.png';
 import printer from '../../images/printbg.png';
+import DayGrid from '../MonthlyCalendar/MonthlyCalendar';
 
 class LatestEventsFeed extends Component {
   render() {
@@ -14,7 +15,7 @@ class LatestEventsFeed extends Component {
          <h1 style={{color: '#21ba45', textAlign:'center'}}>Recommendations</h1>
          <h2>Hourly Predictions:</h2>
 
-        <div class="ui link cards" style={{margin: "20px", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div class="ui link cards" style={{margin: "10px", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
               
           <div class="card">
                 <div class="image">
@@ -86,7 +87,13 @@ class LatestEventsFeed extends Component {
             </div>
           </div>
         </div>
-        </div>
+      
+        <h2>Monthly Predictions:</h2>
+        <h3>Green blocks indicate low energy usage, while red blocks indicate high energy usage.</h3>
+        <DayGrid/>
+      </div>
+
+        
     );
   }
 }
