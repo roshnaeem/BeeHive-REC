@@ -35,7 +35,7 @@ class Invoice extends Component {
 
   }
   let returnValue;
-  fetch("http://localhost:8080/api/v1/invoice/1/1", requestOptions)
+  fetch("http://localhost:8083/api/v1/invoice/1/1", requestOptions)
 
 
   .then(response => response.json())

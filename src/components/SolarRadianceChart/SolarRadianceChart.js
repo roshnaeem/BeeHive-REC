@@ -81,7 +81,7 @@ class SolarRadianceChart extends Component {
 
   getTotalOutputPower() {
     let energyobj;
-    fetch("http://localhost:8080/api/v1/productions/1/1?numberOfTransactions=6")
+    fetch("http://localhost:8081/api/v1/productions/1/1?numberOfTransactions=6")
     .then(response => response.json())
     .then(data => {
       energyobj = data;

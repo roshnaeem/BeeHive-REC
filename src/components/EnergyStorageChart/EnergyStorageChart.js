@@ -82,7 +82,7 @@ class EnergyStorageChart extends Component {
 
   getTotalOutputPower() {
     let energyobj;
-    fetch("http://localhost:8080/api/v1/consumptions/1/1?numberOfTransactions=6")
+    fetch("http://localhost:8082/api/v1/consumptions/1/1?numberOfTransactions=6")
     .then(response => response.json())
     .then(data => {
       energyobj = data;

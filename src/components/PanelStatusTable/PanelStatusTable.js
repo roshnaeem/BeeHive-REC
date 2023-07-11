@@ -22,7 +22,7 @@ class PanelStatusTable extends Component {
 
   let returnValue;
 
-  fetch("http://localhost:8080/api/v1/consumptions/credits/1/1", requestOptions)
+  fetch("http://localhost:8082/api/v1/consumptions/credits/1/1", requestOptions)
 
   .then(response => response.json())
 
