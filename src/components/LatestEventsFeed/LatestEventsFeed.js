@@ -58,8 +58,8 @@ class LatestEventsFeed extends Component {
              
               </span>
               <span>
-                <i class="leaf icon"></i>
-                Use the Washing Machine and Dryer
+                <i class="leaf icon" ></i>
+                Use the washing machine and dryer.
               </span>
             </div>
           </div>
@@ -89,7 +89,7 @@ class LatestEventsFeed extends Component {
         </div>
       
         <h2>Monthly Predictions:</h2>
-        <h3>Green blocks indicate low energy usage, while red blocks indicate high energy usage.</h3>
+        <h3>System predicts less energy usage on green days and more energy usage on red days.</h3>
         <DayGrid/>
       </div>
 
