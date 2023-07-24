@@ -99,10 +99,27 @@ class PowerOutputChart extends Component {
 
   static getInitialTotalOutputPower(panels) {
     return panels.reduce((accumulator, panel) => {
-      const outputPowerW = panel.outputVoltageV * panel.outputCurrentA;
-      const outputPowerKW = outputPowerW / 1000;
-      return accumulator + outputPowerKW;
+      return 0;
     }, 0);
+  }
+
+  componentDidMount() {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: JSON.stringify({'communityId': 1, 'houseId': 1}),
+    }
+    let returnValue;
+
+    fetch("http://localhost:8080/api/v1/inventory/current", requestOptions)
+    .then(response => response.json())
+    .then(data => {
+      this.setState({ currentEnergy: data[0].energyProduced })
+    })
+    return returnValue;
   }
 
  
