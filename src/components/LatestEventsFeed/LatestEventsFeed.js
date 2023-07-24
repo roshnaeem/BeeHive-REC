@@ -16,7 +16,6 @@ class LatestEventsFeed extends Component {
          <h2>Hourly Predictions:</h2>
 
         <div class="ui link cards" style={{margin: "10px", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-              
           <div class="card">
                 <div class="image">
                   <img src={dishwasher} style={{width:'100%', height:'300px'}} alt="Dishwasher image"/>
@@ -32,11 +31,10 @@ class LatestEventsFeed extends Component {
             </div>
             <div class="extra content">
               <span class="right floated">
-                
               </span>
               <span>
                 <i class="leaf icon"></i>
-                Start the dishwasher. 
+                Start the dishwasher.
               </span>
             </div>
           </div>
@@ -55,7 +53,6 @@ class LatestEventsFeed extends Component {
             </div>
             <div class="extra content">
               <span class="right floated">
-             
               </span>
               <span>
                 <i class="leaf icon" ></i>
@@ -78,7 +75,6 @@ class LatestEventsFeed extends Component {
             </div>
             <div class="extra content">
               <span class="right floated">
-                
               </span>
               <span>
                 <i class="leaf icon"></i>
@@ -87,13 +83,10 @@ class LatestEventsFeed extends Component {
             </div>
           </div>
         </div>
-      
         <h2>Monthly Predictions:</h2>
         <h3>System predicts less energy usage on green days and more energy usage on red days.</h3>
         <DayGrid/>
       </div>
-
-        
     );
   }
 }

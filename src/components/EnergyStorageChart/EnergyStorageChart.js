@@ -19,7 +19,7 @@ class EnergyStorageChart extends Component {
     this.powerLineBackgroundColor = palette.lightGreen.setAlpha(0.1).toString();
 
     this.powerLineBorderColor = palette.lightGreen.toString();
-    this.timeLabels = ['-5m', '-4m', '-3m', '-2m', '-1m', 'Now'];
+    this.timeLabels = ['-5h', '-4h', '-3h', '-2h', '-1h', 'Now'];
 
     this.options = {
       maintainAspectRatio: false,
@@ -89,12 +89,12 @@ class EnergyStorageChart extends Component {
       console.log("energy object given here", energyobj)
     })
     .then(() => {
-      this.setState({energyProduction0: energyobj[0].units})
-      this.setState({energyProduction1: energyobj[1].units})
-      this.setState({energyProduction2: energyobj[2].units})
-      this.setState({energyProduction3: energyobj[3].units})
-      this.setState({energyProduction4: energyobj[4].units})
-      this.setState({energyProduction5: energyobj[5].units})
+      this.setState({energyProduction0: energyobj[5].units})
+      this.setState({energyProduction1: energyobj[4].units})
+      this.setState({energyProduction2: energyobj[3].units})
+      this.setState({energyProduction3: energyobj[2].units})
+      this.setState({energyProduction4: energyobj[1].units})
+      this.setState({energyProduction5: energyobj[0].units})
      });
     return energyobj;
   }

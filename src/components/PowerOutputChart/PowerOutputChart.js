@@ -20,7 +20,7 @@ class PowerOutputChart extends Component {
 
     this.powerLineBorderColor = palette.lightGreen.toString();
 
-    this.timeLabels = ['-5m', '-4m', '-3m', '-2m', '-1m', 'Now'];
+    this.timeLabels = ['0', '', '', '', '', 'Now'];
 
     this.options = {
       maintainAspectRatio: false,

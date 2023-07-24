@@ -18,7 +18,7 @@ class SolarRadianceChart extends Component {
     this.powerLineBackgroundColor = palette.lightGreen.toString();
 
     this.powerLineBorderColor = palette.lightGreen.toString();
-    this.timeLabels = ['-5m', '-4m', '-3m', '-2m', '-1m', 'Now'];
+    this.timeLabels = ['-5h', '-4h', '-3h', '-2h', '-1h', 'Now'];
 
     this.options = {
       maintainAspectRatio: false,
@@ -87,12 +87,12 @@ class SolarRadianceChart extends Component {
       energyobj = data;
     })
     .then(() => {
-      this.setState({energyProduction0: energyobj[0].energyProduced})
-      this.setState({energyProduction1: energyobj[1].energyProduced})
-      this.setState({energyProduction2: energyobj[2].energyProduced})
-      this.setState({energyProduction3: energyobj[3].energyProduced})
-      this.setState({energyProduction4: energyobj[4].energyProduced})
-      this.setState({energyProduction5: energyobj[5].energyProduced})
+      this.setState({energyProduction0: energyobj[5].energyProduced})
+      this.setState({energyProduction1: energyobj[4].energyProduced})
+      this.setState({energyProduction2: energyobj[3].energyProduced})
+      this.setState({energyProduction3: energyobj[2].energyProduced})
+      this.setState({energyProduction4: energyobj[1].energyProduced})
+      this.setState({energyProduction5: energyobj[0].energyProduced})
      });
     return energyobj;
   }
