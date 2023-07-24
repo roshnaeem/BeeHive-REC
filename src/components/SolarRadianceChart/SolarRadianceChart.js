@@ -79,6 +79,25 @@ class SolarRadianceChart extends Component {
     setInterval(this.getTotalOutputPower.bind(this), 5000);
   }
 
+  componentDidMount() {
+    let energyobj;
+    fetch("http://localhost:8081/api/v1/productions/1/1?numberOfTransactions=6")
+    .then(response => response.json())
+    .then(data => {
+      energyobj = data;
+    })
+    .then(() => {
+      this.setState({energyProduction0: energyobj[0].energyProduced})
+      this.setState({energyProduction1: energyobj[1].energyProduced})
+      this.setState({energyProduction2: energyobj[2].energyProduced})
+      this.setState({energyProduction3: energyobj[3].energyProduced})
+      this.setState({energyProduction4: energyobj[4].energyProduced})
+      this.setState({energyProduction5: energyobj[5].energyProduced})
+     });
+    return energyobj;
+  }
+
+
   getTotalOutputPower() {
     let energyobj;
     fetch("http://localhost:8081/api/v1/productions/1/1?numberOfTransactions=6")
@@ -108,9 +127,7 @@ class SolarRadianceChart extends Component {
 
   static getInitialTotalOutputPower(panels) {
     return panels.reduce((accumulator, panel) => {
-      const outputPowerW = panel.outputVoltageV * panel.outputCurrentA;
-      const outputPowerKW = outputPowerW / 1000;
-      return accumulator + outputPowerKW;
+      return 0;
     }, 0);
   }
 

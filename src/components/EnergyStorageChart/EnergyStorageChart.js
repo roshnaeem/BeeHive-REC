@@ -80,6 +80,25 @@ class EnergyStorageChart extends Component {
     setInterval(this.getTotalOutputPower.bind(this), 5000);
   }
 
+  componentDidMount() {
+    let energyobj;
+    fetch("http://localhost:8082/api/v1/consumptions/1/1?numberOfTransactions=6")
+    .then(response => response.json())
+    .then(data => {
+      energyobj = data;
+      console.log("energy object given here", energyobj)
+    })
+    .then(() => {
+      this.setState({energyProduction0: energyobj[0].units})
+      this.setState({energyProduction1: energyobj[1].units})
+      this.setState({energyProduction2: energyobj[2].units})
+      this.setState({energyProduction3: energyobj[3].units})
+      this.setState({energyProduction4: energyobj[4].units})
+      this.setState({energyProduction5: energyobj[5].units})
+     });
+    return energyobj;
+  }
+
   getTotalOutputPower() {
     let energyobj;
     fetch("http://localhost:8082/api/v1/consumptions/1/1?numberOfTransactions=6")
